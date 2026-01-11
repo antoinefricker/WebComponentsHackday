@@ -4,6 +4,7 @@ export * from "./components/03-Attributes";
 export * from "./components/04-Slots";
 export * from "./components/05-Styling";
 export * from "./components/06-ThemeWrapper";
+export * from "./components/07-JsxTemplate";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     <h2>Implemented in TypeScript</h2>
@@ -15,4 +16,5 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     <ui-theme-wrapper primary-color="#FF3366">
       <ui-styling></ui-styling>
     </ui-theme-wrapper>
+    <ui-webjsx-component></ui-webjsx-component>
 `;

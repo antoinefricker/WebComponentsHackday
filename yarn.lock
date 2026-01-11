@@ -393,3 +393,8 @@ vite@^7.2.4:
     tinyglobby "^0.2.15"
   optionalDependencies:
     fsevents "~2.3.3"
+
+webjsx@^0.0.73:
+  version "0.0.73"
+  resolved "https://registry.yarnpkg.com/webjsx/-/webjsx-0.0.73.tgz#f9ebbce318bca4630ceb3f24b4ad958172ab6f42"
+  integrity sha512-qm7684aATilWMHES/tVjl5CHFhhHwnP+nehzfqg5tXnOdSKg2MOVmlU6MwfwsF52e2PTjQrkyfMF9XKqTZ0QoA==
