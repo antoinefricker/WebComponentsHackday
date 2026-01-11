@@ -1,10 +1,10 @@
 export * from "./components/01-Barebone";
 export * from "./components/02-ShadowDOM";
+export * from "./components/03-Attributes";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-    <div>
-        <h2>Implemented in TS</h2>
-        <ui-barebone></ui-barebone>
-        <ui-shadow-dom></ui-shadow-dom>
-    </div>
+    <h2>Implemented in TypeScript</h2>
+    <ui-barebone></ui-barebone>
+    <ui-shadow-dom></ui-shadow-dom>
+    <ui-attributes width="600"></ui-attributes>
 `;
