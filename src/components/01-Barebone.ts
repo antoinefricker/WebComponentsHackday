@@ -2,7 +2,7 @@ export class Barebone extends HTMLElement {
   constructor() {
     super();
 
-    this.textContent = "Barebone component";
+    this.innerHTML = `<p style="text-decoration: underline;">Barebone component</p>`;
   }
 
   connectedCallback() {

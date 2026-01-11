@@ -2,7 +2,7 @@ import { Colors } from "../utils/Colors";
 import { Parser } from "../utils/Parser";
 
 const template = document.createElement("template");
-template.innerHTML = `<span>Attributes component</span>`;
+template.innerHTML = `<p style="text-decoration: underline;">Attributes component</p>`;
 
 const COMPONENTS_ATTRIBUTES = ["color"] as const;
 
@@ -18,7 +18,7 @@ export class Attributes extends HTMLElement {
     this._shadow = this.attachShadow({ mode: "open" });
     this._shadow.appendChild(template.content.cloneNode(true));
 
-    this._root = this._shadow.querySelector("span")!;
+    this._root = this._shadow.querySelector("p")!;
   }
 
   connectedCallback() {

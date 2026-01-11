@@ -1,5 +1,5 @@
 const template = document.createElement("template");
-template.innerHTML = `<p>ShadowDOM component</p>`;
+template.innerHTML = `<p style="text-decoration: underline;">ShadowDOM component</p>`;
 
 export class ShadowDOM extends HTMLElement {
   private shadow: ShadowRoot;
