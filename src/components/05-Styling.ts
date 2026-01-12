@@ -1,6 +1,6 @@
 const template = document.createElement("template");
 template.innerHTML = `
-    <p style="text-decoration: underline;">Styling component</p>
+    <h3>Styling a component</h3>
     <p>I can use a theme also such as <span class="highlight">here</span></p>
 
     <style>

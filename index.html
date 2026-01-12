@@ -29,24 +29,51 @@
         margin: 2rem 0;
       }
     </style>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
 
   <body>
     <h1>Web Components</h1>
 
-    <h2>Implemented in HTML</h2>
-
     <ui-barebone></ui-barebone>
-    <ui-shadow-dom></ui-shadow-dom>
-    <ui-attributes color="#3366FF"></ui-attributes>
+    <ui-barebone2></ui-barebone2>
+    <ui-barebone-template></ui-barebone-template>
+
+    <ui-encapsulation-opened-shadow></ui-encapsulation-opened-shadow>
+    <ui-encapsulation-closed-shadow></ui-encapsulation-closed-shadow>
+
+    <ui-handle-attributes
+      color="#3366FF"
+      id="handle-attributes"
+    ></ui-handle-attributes>
+
+    <input
+      type="color"
+      id="color-setter"
+      name="color-setter"
+      value="#ff0000"
+      onchange="handleColorChange(event)"
+    />
+    <label for="color-setter">Pick a color (outside the component)</label>
+    <script>
+      function handleColorChange(event) {
+        const color = event.target.value;
+        const element = document.getElementById("handle-attributes");
+        element.setAttribute("color", color);
+      }
+    </script>
+
     <ui-slots>
       Default slot content
       <span slot="shape">square</span>
     </ui-slots>
+
     <ui-styling></ui-styling>
     <ui-theme-wrapper primary-color="#3366FF">
       <ui-styling></ui-styling>
     </ui-theme-wrapper>
+
     <ui-webjsx-component></ui-webjsx-component>
 
     <div id="app"></div>

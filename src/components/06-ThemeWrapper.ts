@@ -5,15 +5,12 @@ const COMPONENTS_ATTRIBUTES = ["primary-color"] as const;
 
 const template = document.createElement("template");
 template.innerHTML = `
-<div>
-    <p style="text-decoration: underline;">ThemeWrapper component</p>
-    <style>
-        .test{
-            color: red;
-        }
-    </style>
+<h3>ThemeWrapper component</h3>
+
+<div class="wrapper">
     <slot></slot>
-</div> 
+</div>
+<style></style>
 `;
 
 export class ThemeWrapper extends HTMLElement {
@@ -29,7 +26,6 @@ export class ThemeWrapper extends HTMLElement {
     this._shadow.appendChild(template.content.cloneNode(true));
 
     this._styleElement = this._shadow.querySelector("style")!;
-    console.log({ styleElement: this._styleElement });
   }
 
   connectedCallback() {
@@ -56,6 +52,9 @@ export class ThemeWrapper extends HTMLElement {
             --primary-contrast-color: ${Colors.getContrastColor(
               this._primaryColor
             )};
+            display: block;
+            border: 1px dotted #cccccc;
+            padding: 0 16px; 
         }
     `;
   }

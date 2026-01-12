@@ -12,8 +12,8 @@ export class WebJSXComponent extends HTMLElement {
   render() {
     const vdom = (
       <>
-        <p style="text-decoration: underline;">WebJSX component</p>
-        <p>Template is set with WebJSX</p>
+        <h3>Use a JSX template with WebJSX</h3>
+        <p>That is much more convenient.</p>
         <ul>
           {[1, 2, 3].map((num) => (
             <li key={num}>Item {num}</li>

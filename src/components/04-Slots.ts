@@ -1,6 +1,6 @@
 const template = document.createElement("template");
 template.innerHTML = `<div>
-    <p style="text-decoration: underline;">Slots component</p>
+    <h3>Using slots</h3>
     <div>
         <slot></slot>
     </div>
